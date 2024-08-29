@@ -10,3 +10,5 @@ setInterval(function() {
         var a = 3 + z;
     }
 }, 1000);
+
+console.log('This is the end of the script');
