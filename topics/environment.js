@@ -1,2 +1,2 @@
-let waving = 'Hello world';
-console.log(waving);
+let myname = process.env.MYNAME;
+console.log('Hello, ' + myname);
