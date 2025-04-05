@@ -1,3 +1,5 @@
 function imAsync() {
-    console.log("I'm an async function");
+    console.log("Hi, I'm an async function");
 }
+
+imAsync()
