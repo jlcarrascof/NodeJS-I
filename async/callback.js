@@ -1,7 +1,11 @@
-function imAsync() {
-    console.log("Hi, I'm an async function");
+function imAsync(myCallback) {
+    setTimeout(function() {
+        console.log("I'm async")
+        myCallback()
+    }, 1000)
 }
 
 console.log('Init process')
-imAsync()
-console.log('Finishing process')
+imAsync(function() {
+    console.log('Finishing process')
+})
