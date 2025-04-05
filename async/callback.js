@@ -5,7 +5,17 @@ function hello(name, myCallback) {
     }, 1000)
 }
 
+function goodbye(name, secondCallback) {
+    setTimeout(function() {
+        console.log("Goodbye, " + name)
+        secondCallback()
+    }, 1000)
+}
+
+
 console.log('Init process')
 hello('Javier', function() {
-    console.log('Finishing process')
+    goodbye('Javier', function() {
+        console.log('Finishing process')
+    })
 })
