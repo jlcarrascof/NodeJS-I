@@ -25,6 +25,12 @@ function goodbye(name, secondCallback) {
 
 console.log('Init process')
 hello('Javier', function(name) {
+    goodbye(name, function() {
+        console.log('Finishing')
+    })
+})
+
+/* hello('Javier', function(name) {
     talk(function() {
         talk(function() {
             talk(function() {
@@ -34,4 +40,4 @@ hello('Javier', function(name) {
             })
         })
     })
-})
+}) */
