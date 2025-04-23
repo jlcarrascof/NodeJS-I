@@ -26,13 +26,19 @@ function conversation(name, times, callback) {
             conversation(name, --times, callback)
         })
     } else {
-        callback(name)
+        goodbye(name)
     }
 }
 
 // --
 
 console.log('Init process')
+hello('Javier', function(name) {
+    conversation(name, 3, function() {
+        console.log('Finishing process')
+    })
+})
+
 /* hello('Javier', function(name) {
     goodbye(name, function() {
         console.log('Finishing')
