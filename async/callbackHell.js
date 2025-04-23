@@ -26,8 +26,12 @@ function goodbye(name, secondCallback) {
 console.log('Init process')
 hello('Javier', function(name) {
     talk(function() {
-        goodbye(name, function() {
-            console.log('Finishing process')
+        talk(function() {
+            talk(function() {
+                goodbye(name, function() {
+                    console.log('Finishing process')
+                })
+            })
         })
     })
 })
