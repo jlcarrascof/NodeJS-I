@@ -5,6 +5,14 @@ function hello(name, myCallback) {
     }, 1500)
 }
 
+function talk(callbackTalk) {
+    setTimeout(function() {
+        console.log("Bla bla bla...")
+        callbackTalk()
+    }
+    , 1000)
+}
+
 function goodbye(name, secondCallback) {
     setTimeout(function() {
         console.log("Goodbye, " + name)
@@ -13,13 +21,13 @@ function goodbye(name, secondCallback) {
 }
 
 
+// --
+
 console.log('Init process')
 hello('Javier', function(name) {
-    goodbye(name, function() {
-        console.log('Finishing process')
+    talk(function() {
+        goodbye(name, function() {
+            console.log('Finishing process')
+        })
     })
 })
-
-
-// hello('Javier', function() {})
-// goodbye('Javier', function() {})
