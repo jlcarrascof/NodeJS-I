@@ -26,7 +26,7 @@ function conversation(name, times, callback) {
             conversation(name, --times, callback)
         })
     } else {
-        goodbye(name)
+        goodbye(name, callback)
     }
 }
 
