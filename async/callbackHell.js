@@ -20,15 +20,24 @@ function goodbye(name, secondCallback) {
     }, 1000)
 }
 
+function conversation(name, times, callback) {
+    if (times > 0) {
+        talk(function() {
+            conversation(name, --times, callback)
+        })
+    } else {
+        callback(name)
+    }
+}
 
 // --
 
 console.log('Init process')
-hello('Javier', function(name) {
+/* hello('Javier', function(name) {
     goodbye(name, function() {
         console.log('Finishing')
     })
-})
+}) */
 
 /* hello('Javier', function(name) {
     talk(function() {
