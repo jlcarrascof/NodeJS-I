@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node src/promises.ts"
+    "dev:promises": "nodemon --watch src --ext ts --exec ts-node src/promises.ts"
   },
   "keywords": [],
   "author": "",
