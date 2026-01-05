@@ -22,3 +22,9 @@ function goodbye(name, secondCallback) {
         secondCallback()
     }, 1000)
 }
+
+console.log('Beginning the process ....');
+hello('Carlos')
+    .then((name) => {
+        console.log('Ending the process ....');
+    })
