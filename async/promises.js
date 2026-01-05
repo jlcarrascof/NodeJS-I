@@ -16,15 +16,18 @@ function talk(callbackTalk) {
     , 1000)
 }
 
-function goodbye(name, secondCallback) {
-    setTimeout(function() {
-        console.log("Goodbye, " + name)
-        secondCallback()
-    }, 1000)
+function goodbye(name) {
+    return new Promise((resolve, reject) => {
+        setTimeout(function() {
+            console.log("Goodbye, " + name)
+            resolve()
+        }, 1000)
+    })
 }
 
 console.log('Beginning the process ....');
 hello('Carlos')
+    .then(goodbye)
     .then((name) => {
         console.log('Ending the process ....');
     })
