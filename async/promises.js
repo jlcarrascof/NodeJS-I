@@ -1,8 +1,11 @@
-function hello(name, myCallback) {
-    setTimeout(function() {
-        console.log("Hi, " + name)
-        myCallback(name)
-    }, 1500)
+function hello(name) {
+
+    return new Promise(function (resolve, reject) {
+        setTimeout(function() {
+            console.log("Hi, " + name)
+            resolve(name)
+        }, 1500)
+    })
 }
 
 function talk(callbackTalk) {
