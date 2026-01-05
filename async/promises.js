@@ -13,7 +13,8 @@ function talk(name) {
     return new Promise((resolve, reject) => {
         setTimeout(function() {
             console.log("Bla bla bla...")
-            resolve(name)
+            // resolve(name)
+            reject('There is an error')
         }
         , 1000)
     })
