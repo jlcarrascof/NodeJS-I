@@ -37,3 +37,7 @@ hello('Carlos')
     .then((name) => {
         console.log('Ending the process ....');
     })
+    .catch(error => {
+        console.error('There is an error')
+        console.log('Error: ', error)
+    })
