@@ -8,12 +8,16 @@ function hello(name) {
     })
 }
 
-function talk(callbackTalk) {
-    setTimeout(function() {
-        console.log("Bla bla bla...")
-        callbackTalk()
-    }
-    , 1000)
+function talk(name) {
+
+    return new Promise((resolve, reject) => {
+        setTimeout(function() {
+            console.log("Bla bla bla...")
+            resolve(name)
+        }
+        , 1000)
+    })
+
 }
 
 function goodbye(name) {
@@ -27,6 +31,7 @@ function goodbye(name) {
 
 console.log('Beginning the process ....');
 hello('Carlos')
+    .then(talk)
     .then(goodbye)
     .then((name) => {
         console.log('Ending the process ....');
