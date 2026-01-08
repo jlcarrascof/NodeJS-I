@@ -36,6 +36,10 @@ async function main() {
     await talk();
     await talk();
     await goodbye(name);
+    console.log('Finishing the process ...');
 }
 
+console.log('Starting the process ....');
 main();
+console.log(`It's gonna be the second message`);
+
