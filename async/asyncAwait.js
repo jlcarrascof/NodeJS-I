@@ -30,4 +30,8 @@ function goodbye(name) {
     })
 }
 
-await hello(name);
+async function main() {
+    await hello('Carlos');
+}
+
+main();
