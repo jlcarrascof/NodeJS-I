@@ -13,8 +13,8 @@ async function talk(name) {
     return new Promise((resolve, reject) => {
         setTimeout(function() {
             console.log("Bla bla bla...")
-            // resolve(name)
-            reject('There is an error')
+            resolve(name)
+            // reject('There is an error')
         }
         , 1000)
     })
@@ -31,7 +31,11 @@ async function goodbye(name) {
 }
 
 async function main() {
-    await hello('Carlos');
+    let name = await hello('Carlos');
+    await talk();
+    await talk();
+    await talk();
+    await goodbye(name);
 }
 
 main();
