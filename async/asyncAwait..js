@@ -1,4 +1,4 @@
-function hello(name) {
+async function hello(name) {
 
     return new Promise(function (resolve, reject) {
         setTimeout(function() {
@@ -29,3 +29,5 @@ function goodbye(name) {
         }, 1000)
     })
 }
+
+await hello(name);
