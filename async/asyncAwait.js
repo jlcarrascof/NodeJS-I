@@ -8,7 +8,7 @@ async function hello(name) {
     })
 }
 
-function talk(name) {
+async function talk(name) {
 
     return new Promise((resolve, reject) => {
         setTimeout(function() {
@@ -21,7 +21,7 @@ function talk(name) {
 
 }
 
-function goodbye(name) {
+async function goodbye(name) {
     return new Promise((resolve, reject) => {
         setTimeout(function() {
             console.log("Goodbye, " + name)
