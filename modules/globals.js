@@ -6,3 +6,12 @@ let interval = setInterval(function () {
     }
     i++;
 }, 1000);
+
+console.log(process);
+console.log(__dirname);
+console.log(__filename);
+
+// Not use if not strictly necessary ....
+
+global.myVar = 'The Value';
+console.log(myVar);
